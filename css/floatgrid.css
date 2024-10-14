@@ -1,0 +1,53 @@
+/* Float grid */
+
+.row {
+    margin: 0 auto;
+}
+
+.col-3,
+.col-4,
+.col-6,
+.col-12 {
+    width: 100%;
+    float: left;
+    transition: all .8s;
+}
+
+.row:last-of-type .col-3:nth-last-child(1),
+.row:last-of-type .col-4:nth-last-child(1),
+.row:last-of-type .col-6:nth-last-child(1),
+.row:last-of-type .col-12:nth-last-child(1){
+    margin-bottom: 0;
+}
+
+/* Clearfix */
+
+.row::before,
+.row::after {
+    display: table;
+    content: '';
+}
+
+.row::after {
+    clear: both;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 600px) {
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.3333333%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+}

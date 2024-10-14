@@ -1,0 +1,364 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200');
+
+/* General */
+
+body {
+    background-color: #0c0d12;
+    font-family: 'Times New Roman';
+    text-transform: lowercase;
+    font-size: 1.2rem;
+    color: white;
+}
+
+header,
+h2,
+main,
+footer {
+    transition: all .8s;
+}
+
+a,
+.hamburgericon,
+.closebutton {
+    transition: all .15s;
+    text-decoration: none;
+}
+
+h1,
+nav {
+    user-select: none;
+}
+
+nav a:link,
+nav a:visited,
+footer a:link,
+footer a:visited,
+.mobilemenu a:link,
+.mobilemenu a:visited,
+h2,
+footer,
+.hamburgericon,
+.closebutton {
+    color: #83949B;
+}
+
+nav a:focus,
+nav a:hover,
+nav a:active,
+.mobilemenu a:focus,
+.mobilemenu a:hover,
+.mobilemenu a:active,
+.hamburgericon:focus,
+.hamburgericon:hover,
+.hamburgericon:focus,
+.closebutton:focus,
+.closebutton:hover,
+.closebutton:focus {
+    opacity: .5;
+}
+
+.logo {
+    text-transform: lowercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 1.7rem;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
+main,
+footer {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.tourevent p,
+.roundbutton {
+    line-height: 1.5;
+}
+
+.hamburgericon,
+.closebutton {
+    cursor: pointer
+}
+
+/* Clearfix */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Fix for hover not working when floated */
+
+.fixfloathover {
+    position: relative;
+    z-index: 99;
+}
+
+/* Navigation */
+
+header {
+    margin-top: 55px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav.desktop {
+    display: none;
+}
+
+nav.mobile {
+    padding-right: 35px;
+    padding-left: 35px;
+}
+
+.hamburgericon {
+    float: right;
+    font-size: 1.7rem;
+}
+
+nav li,
+nav ul {
+    display: inline-block;
+}
+
+nav li:last-of-type {
+    margin-right: 0;
+}
+
+.menu {
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 32px;
+}
+
+header .socialmedia {
+    text-align: right;
+}
+
+.socialmedia li {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+.socialmedia li:last-of-type {
+    margin-right: 0;
+}
+
+nav a:not([href]) {
+    font-weight: bold;
+    font-style: italic;
+    cursor: default;
+}
+
+nav a:not([href]):hover {
+    opacity: 1;
+}
+
+/* Mobile menu */
+
+.mobilemenu {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    padding-top: 50px;
+    background-color: #485054;
+    text-align: center;
+}
+
+.mobilemenu .closebutton {
+    position: absolute;
+    right: 35px;
+    font-size: 1.7rem;
+}
+
+.mobilemenu ul:first-of-type {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+
+.mobilemenu ul:first-of-type li {
+    margin-bottom: 3rem;
+}
+
+.mobilemenu a:not([href]) {
+    font-weight: bold;
+    font-style: italic;
+    cursor: default;
+}
+
+.mobilemenu a:not([href]):hover,
+.mobilemenu .logo:hover {
+    opacity: 1;
+}
+
+/* Main */
+
+main {
+    min-width: 320px;
+    margin: 40px auto 20px;
+}
+
+main.discography {
+    max-width: 1200px;
+}
+
+main.tour {
+    max-width: 1500px;
+}
+
+.col-6 {
+    margin-bottom: 30px;
+}
+
+.album {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 10vw;
+    margin-bottom: 45px;
+}
+
+h3,
+.tourlocation {
+    font-weight: bold;
+    font-style: italic;
+}
+
+ol {
+    list-style: lower-roman;
+    list-style-position: inside;
+}
+
+h3,
+ol li {
+    margin-bottom: 20px;
+}
+
+.albumcover {
+    width: 100%;
+    border: 1px solid #83949B;
+}
+
+.downloadbutton {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.tourevent {
+    padding: 30px 0;
+    border-top: 1px solid #83949B;
+}
+
+.tourevent .col-4:last-child {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.roundbutton {
+    padding: 5px 40px;
+    border: 1px solid;
+    border-radius: 30px;
+}
+
+a.roundbutton:link,
+a.roundbutton:visited {
+    color: white;
+}
+
+a.roundbutton:focus,
+a.roundbutton:hover,
+a.roundbutton:active {
+    opacity: .5;
+}
+
+/* Footer */
+
+footer {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: .9rem;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 600px) {
+    h2 {
+        font-size: 4rem;
+        margin-bottom: 80px;
+    }
+
+    .album {
+        margin-bottom: 100px;
+    }
+
+    .col-6:first-child {
+        padding-right: 4%;
+    }
+
+    .col-6:last-child {
+        padding-left: 4%;
+    }
+
+    ol {
+        margin-bottom: 40px;
+    }
+
+    .tourevent {
+        padding: 40px 60px;
+    }
+
+    .tourevent .col-4:nth-child(2) {
+        padding-right: 20px;
+    }
+
+    .tourevent .col-4:last-child {
+        margin-top: 0;
+        text-align: right;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+    header {
+        max-width: calc(100vw - 80px);
+        margin-top: 80px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    main {
+        margin-top: 60px;
+    }
+
+    nav.mobile {
+        display: none;
+    }
+
+    .mobilemenu {
+        display: none !important;
+    }
+
+    nav.desktop {
+        display: block;
+    }
+}
